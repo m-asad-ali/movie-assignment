@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box, ThemeProvider } from '@mui/system';
-import { Container, Divider } from '@material-ui/core';
 
 export default function BoxSx() {
     return (
@@ -14,25 +13,17 @@ export default function BoxSx() {
                 },
             }}
         >
-            <Container sx={{
-                display: 'flex',
-                alignItems: 'center',
-            }}>
-
-                <Box
-                    sx={{
-                        marginTop: 5,
-                        marginBottom: 5,
-                        height: 300,
-                        borderRadius: 10,
-                        bgcolor: 'primary.main',
-                        '&:hover': {
-                            bgcolor: 'primary.dark',
-                        },
-                    }}
-                />
-            </Container>
-            {/* <Divider /> */}
-        </ThemeProvider>
+            <Box
+                sx={{
+                    height: 300,
+                    borderRadius: 10,
+                    marginTop: 5, marginBottom: 5, marginLeft: '2.5%', marginRight: '2.5%',
+                    bgcolor: 'primary.main',
+                    '&:hover': {
+                        bgcolor: 'primary.dark',
+                    },
+                }}
+            />
+        </ThemeProvider >
     );
 }
