@@ -57,7 +57,7 @@ const MovieDetail = () => {
         </Button>
       </Grid>
 
-      <Grid item xs={12} md={8}>
+      {/* <Grid item xs={12} md={8}>
         <img
           src={img1}
           alt="Movie"
@@ -68,7 +68,7 @@ const MovieDetail = () => {
             display: "none",
           }}
         />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
