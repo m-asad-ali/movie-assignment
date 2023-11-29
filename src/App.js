@@ -1,11 +1,14 @@
 import React from 'react'
-import Home from './Pages/Home';
+import List from './Pages/List';
+import Box from './Components/box';
+
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
 
   return (
     <>
-      <Home />
+      <Box />
+      <List />
 
       {/* <Router>
         <Switch>
