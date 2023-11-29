@@ -26,23 +26,22 @@ const List = () => {
             {
                 movies.map((movie) => (
                     <Grid item key={movie.id} xs={6} sm={4} md={3} lg={2}>
-                        <Card style={{ height: '100%', width: '100%' }}>
-                            <CardMedia
-                                style={{ height: 300 }}
-                                image={img1}
-                                title="Movie Image"
-                            />
-                            <CardContent>
-                                <Typography variant="h6" component="div" style={{ height: 60, overflow: 'hidden' }}>
-                                    {movie.title}
-                                </Typography>
-                                <Link to={`/movie/${movie.id}`} style={{ textDecoration: 'none' }}>
-                                    <Button size="small" variant="contained" color="primary">
-                                        Details
-                                    </Button>
-                                </Link>
-                            </CardContent>
-                        </Card>
+                        <Link to={`/movie/${movie.id}`} style={{ textDecoration: 'none' }}>
+
+                            <Card style={{ height: '100%', width: '100%' }}>
+                                <CardMedia
+                                    style={{ height: 300 }}
+                                    image={img1}
+                                    title="Movie Image"
+                                />
+                                <CardContent>
+                                    <Typography variant="h6" component="div" style={{ height: 30, overflow: 'hidden' }}>
+                                        {movie.title}
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
                     </Grid>
                 ))
             }
