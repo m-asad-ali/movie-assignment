@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-      <Home></Home>
-      <h1>APP JS</h1>
+      <Home />
+
       {/* <Router>
         <Switch>
           <Route path="/" exact component={Home} />
