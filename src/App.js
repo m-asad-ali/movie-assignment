@@ -1,21 +1,21 @@
-import React from 'react'
-import List from './Pages/List';
-import Box from './Components/box';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_MOVIES } from "./GraphQL/Queries";
 
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Box from "./Components/box";
+import List from "./Pages/List";
+
 function App() {
+  const { loading, error, data } = useQuery(GET_ALL_MOVIES);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error : {error.message}</p>;
+  if (data) console.log(data.allFilms.films);
 
   return (
     <>
       <Box />
-      <List />
-
-      {/* <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/movie/:id" component={MovieDetail} />
-        </Switch>
-      </Router> */}
+      <List movies={data.allFilms.films} />
     </>
   );
 }

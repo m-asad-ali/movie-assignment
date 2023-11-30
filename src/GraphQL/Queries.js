@@ -1,5 +1,5 @@
 // Import everything needed to use the `useQuery` hook
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_ALL_MOVIES = gql`
   {
@@ -7,6 +7,16 @@ export const GET_ALL_MOVIES = gql`
       films {
         id
         title
+        director
+        producers
+        releaseDate
+        openingCrawl
+        characterConnection {
+          characters {
+            id
+            name
+          }
+        }
       }
       totalCount
     }

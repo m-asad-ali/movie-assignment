@@ -1,18 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useParams } from "react-router-dom";
-import {
-  Container,
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-  CardMedia,
-  CardActions,
-  Button,
-} from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 import img1 from "../assets/images/img1.jpg";
-import { red } from "@material-ui/core/colors";
 
 const movies = [
   {
@@ -34,9 +24,11 @@ const MovieDetail = () => {
   }
 
   return (
-    // <Container style={{ paddingLeft: '2.5%', paddingRight: '2.5%', backgroundColor: "red" }}>
-
-    <Grid container spacing={3} style={{ marginTop: 50, paddingLeft: '2.5%', paddingRight: '2.5%' }}>
+    <Grid
+      container
+      spacing={3}
+      style={{ marginTop: 50, paddingLeft: "2.5%", paddingRight: "2.5%" }}
+    >
       <Grid item xs={12} md={6}>
         <img
           src={img1}
