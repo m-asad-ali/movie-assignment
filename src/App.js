@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <MovieContext.Provider value={data.allFilms}>
-        <Box />
+        {/* <Box /> */}
         <Router>
           <Routes>
             <Route exact path="/" element={<List />} />
