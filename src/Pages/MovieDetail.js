@@ -11,7 +11,10 @@ const MovieDetail = () => {
 
   const { id } = useParams();
   const movie = moviesData?.films.find((m) => m.id === id);
-  console.log("🚀 ~ file: MovieDetail.js:14 ~ MovieDetail ~ movie:", movie);
+  console.log(
+    "🚀 ~ file: MovieDetail.js:14 ~ MovieDetail ~ movie:",
+    movie.producers
+  );
 
   if (!movie) {
     return <div>Movie not found</div>;
@@ -27,7 +30,7 @@ const MovieDetail = () => {
         <img
           src={img1}
           alt="Movie"
-          style={{ width: "100%", maxHeight: "90%", objectFit: "cover" }}
+          style={{ width: "70%", maxHeight: "70%", objectFit: "cover" }}
         />
       </Grid>
 
@@ -38,11 +41,22 @@ const MovieDetail = () => {
         <Typography variant="body1" paragraph>
           {movie.openingCrawl}
         </Typography>
+
+        <Typography variant="body1" paragraph>
+          Release Date: {movie.releaseDate}
+        </Typography>
+
         <Typography variant="body1" paragraph>
           Director: {movie.director}
         </Typography>
+
         <Typography variant="body1" paragraph>
-          Release Date: {movie.releaseDate}
+          Characters Names:{" "}
+          {movie.characterConnection.characters.map((obj) => `${obj.name}, `)}
+        </Typography>
+
+        <Typography variant="body1" paragraph>
+          Producer Names: {movie.producers.map((obj) => `${obj}, `)}
         </Typography>
         <Button variant="contained" color="primary">
           Watch Now
