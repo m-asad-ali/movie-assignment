@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { createContext } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_MOVIES } from "./GraphQL/Queries";

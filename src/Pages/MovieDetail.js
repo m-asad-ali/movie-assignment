@@ -10,7 +10,7 @@ const MovieDetail = () => {
   console.log("In Details", moviesData);
 
   const { id } = useParams();
-  const movie = moviesData.films.find((m) => m.id === parseInt(id, 10));
+  const movie = moviesData?.films.find((m) => m.id === parseInt(id, 10));
 
   if (!movie) {
     return <div>Movie not found</div>;
