@@ -7,10 +7,11 @@ import { MovieContext } from "../App";
 
 const MovieDetail = () => {
   const moviesData = useContext(MovieContext);
-  console.log("In Details", moviesData);
+  // console.log("In Details", moviesData.films);
 
   const { id } = useParams();
-  const movie = moviesData?.films.find((m) => m.id === parseInt(id, 10));
+  const movie = moviesData?.films.find((m) => m.id === id);
+  console.log("🚀 ~ file: MovieDetail.js:14 ~ MovieDetail ~ movie:", movie);
 
   if (!movie) {
     return <div>Movie not found</div>;
@@ -35,7 +36,13 @@ const MovieDetail = () => {
           {movie.title}
         </Typography>
         <Typography variant="body1" paragraph>
-          {movie.description}
+          {movie.openingCrawl}
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Director: {movie.director}
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Release Date: {movie.releaseDate}
         </Typography>
         <Button variant="contained" color="primary">
           Watch Now

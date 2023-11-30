@@ -13,36 +13,39 @@ import { MovieContext } from "../App";
 
 const List = () => {
   const moviesData = useContext(MovieContext);
-  console.log(moviesData);
+  console.log("In List", moviesData);
+
   return (
-    <Grid
-      container
-      spacing={3}
-      style={{ paddingLeft: "2.5%", paddingRight: "2.5%" }}
-    >
-      {moviesData.films.map((movie) => (
-        <Grid item key={movie.id} xs={6} sm={4} md={3} lg={2}>
-          <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
-            <Card style={{ height: "100%", width: "100%" }}>
-              <CardMedia
-                style={{ height: 300 }}
-                image={img1}
-                title="Movie Image"
-              />
-              <CardContent>
-                <Typography
-                  variant="h6"
-                  component="div"
-                  style={{ height: 30, overflow: "hidden" }}
-                >
-                  {movie.title}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
-        </Grid>
-      ))}
-    </Grid>
+    <>
+      <Grid
+        container
+        spacing={3}
+        style={{ paddingLeft: "2.5%", paddingRight: "2.5%" }}
+      >
+        {moviesData.films.map((movie) => (
+          <Grid item key={movie.id} xs={6} sm={4} md={3} lg={2}>
+            <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
+              <Card style={{ height: "100%", width: "100%" }}>
+                <CardMedia
+                  style={{ height: 300 }}
+                  image={img1}
+                  title="Movie Image"
+                />
+                <CardContent>
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    style={{ height: 30, overflow: "hidden" }}
+                  >
+                    {movie.title}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 
