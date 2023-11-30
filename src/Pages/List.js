@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { Grid, Card, CardContent, Typography, CardMedia, CardActions, Button } from '@material-ui/core';
 import img1 from "../assets/images/img1.jpg"
 
+import { useQuery } from '@apollo/client';
+import { GET_ALL_MOVIES } from '../GraphQL/Queries';
+
 const movies = [
     { id: 1, title: 'Movie 1', description: 'Description 1' },
     { id: 2, title: 'Movie 2', description: 'Description j;akjdfakjdf ajdkfjdfaj;dlkfjla;djf fkajdsf;lkjasd;lkfja djkladjflkjda s' },
@@ -23,6 +26,13 @@ const movies = [
 ];
 
 const List = () => {
+
+    const { loading, error, data } = useQuery(GET_ALL_MOVIES);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error : {error.message}</p>;
+    if (data) console.log(data);
+
     return (
         <Grid container spacing={3} style={{ paddingLeft: '2.5%', paddingRight: '2.5%' }}>
             {
