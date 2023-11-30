@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import img1 from "../assets/images/img1.jpg";
 import { MovieContext } from "../App";
-import Box from "../Components/box";
 
 const List = () => {
   const moviesData = useContext(MovieContext);
@@ -18,7 +17,6 @@ const List = () => {
 
   return (
     <>
-      <Box />
       <Grid
         container
         spacing={3}

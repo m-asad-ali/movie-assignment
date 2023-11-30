@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_MOVIES } from "./GraphQL/Queries";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Box from "./Components/box";
-import List from "./Pages/List";
+import Home from "./Pages/Home";
 import MovieDetail from "./Pages/MovieDetail";
 
 export const MovieContext = createContext();
@@ -22,7 +22,7 @@ function App() {
         {/* <Box /> */}
         <Router>
           <Routes>
-            <Route exact path="/" element={<List />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/movie/:id" element={<MovieDetail />} />
           </Routes>
         </Router>
