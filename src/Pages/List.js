@@ -13,7 +13,6 @@ import { MovieContext } from "../App";
 
 const List = () => {
   const moviesData = useContext(MovieContext);
-  console.log("In List", moviesData);
 
   return (
     <>
@@ -46,60 +45,3 @@ const List = () => {
 };
 
 export default List;
-
-// const _movies = [
-//   { id: 1, title: "Movie 1", description: "Description 1" },
-//   {
-//     id: 2,
-//     title: "Movie 2",
-//     description:
-//       "Description j;akjdfakjdf ajdkfjdfaj;dlkfjla;djf fkajdsf;lkjasd;lkfja djkladjflkjda s",
-//   },
-//   {
-//     id: 3,
-//     title: "Movie 3",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfhjajdfkajdf;ja",
-//   },
-//   {
-//     id: 4,
-//     title: "Movie 4",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfh",
-//   },
-//   {
-//     id: 5,
-//     title: "Movie 5",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfh",
-//   },
-//   {
-//     id: 6,
-//     title: "Movie 6",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfh",
-//   },
-//   {
-//     id: 6,
-//     title: "Movie 6",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfh",
-//   },
-//   {
-//     id: 6,
-//     title: "Movie 6",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfh",
-//   },
-//   {
-//     id: 6,
-//     title: "Movie 6",
-//     description:
-//       "k;adjsf;akdf;jadfha;jdfhajkdshfkadhvdsgghs;fdha;dfj ahdljhfajsdfh",
-//   },
-//   { id: 6, title: "Movie 6", description: "Description 2" },
-//   { id: 6, title: "Movie 6", description: "Description 2" },
-//   { id: 6, title: "Movie 6", description: "Description 2" },
-//   { id: 6, title: "Movie 6", description: "Description 2" },
-//   { id: 6, title: "Movie 6", description: "Description 2" },
-// ];

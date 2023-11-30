@@ -3,7 +3,6 @@ import React, { createContext } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_MOVIES } from "./GraphQL/Queries";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Box from "./Components/box";
 import Home from "./Pages/Home";
 import MovieDetail from "./Pages/MovieDetail";
 
