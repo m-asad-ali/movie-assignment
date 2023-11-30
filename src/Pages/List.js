@@ -25,14 +25,10 @@ const List = () => {
         style={{ paddingLeft: "2.5%", paddingRight: "2.5%" }}
       >
         {moviesData.films.map((movie) => (
-          <Grid item key={movie.id} xs={6} sm={4} md={3} lg={2}>
+          <Grid item key={movie.id} xs={6} sm={4} md={3} lg={3}>
             <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
               <Card style={{ height: "100%", width: "100%" }}>
-                <CardMedia
-                  style={{ height: 300 }}
-                  image={img1}
-                  title="Movie Image"
-                />
+                <CardMedia style={{ height: 300 }} image={img1} />
                 <CardContent>
                   <Typography
                     variant="h6"
