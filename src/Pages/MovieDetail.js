@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Typography, Button } from "@material-ui/core";
 import img1 from "../assets/images/img1.jpg";
+import NoImgFound from "../assets/images/NoImgFound.jpg";
+
 import { MovieContext } from "../App";
 
 const MovieDetail = () => {

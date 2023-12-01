@@ -8,6 +8,7 @@ import {
   CardMedia,
 } from "@material-ui/core";
 import img1 from "../assets/images/img1.jpg";
+import NoImgFound from "../assets/images/NoImgFound.jpg";
 import { MovieContext } from "../App";
 
 const List = () => {
