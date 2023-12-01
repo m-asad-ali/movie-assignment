@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_MOVIES } from "./GraphQL/Queries";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -9,15 +9,16 @@ import MovieDetail from "./Pages/MovieDetail";
 export const MovieContext = createContext();
 
 function App() {
-  const { loading, error, data } = useQuery(GET_ALL_MOVIES);
+  const [searchTerm, setSearchTerm] = useState("");
 
+  const { loading, error, data } = useQuery(GET_ALL_MOVIES);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
-  // if (data) console.log(data.allFilms.films);
+  // if (data) console.log(data.allFilms);
 
   return (
     <>
-      <MovieContext.Provider value={{ movie: data.allFilms, searchTerm: "" }}>
+      <MovieContext.Provider value={{ data, searchTerm, setSearchTerm }}>
         <Router>
           <Routes>
             <Route exact path="/" element={<Home />} />

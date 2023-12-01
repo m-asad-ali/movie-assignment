@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useContext } from "react";
 import {
   InputAdornment,
   InputBase,
@@ -7,6 +8,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
+import { MovieContext } from "../App";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,11 +32,12 @@ const useStyles = makeStyles((theme) => ({
 
 const SearchBar = () => {
   const classes = useStyles();
+  const { setSearchTerm } = useContext(MovieContext);
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearch = () => {
-    // Handle the search functionality or store the value in the state as needed
-    console.log("Search Value:", searchValue);
+    // console.log("Search Value:", searchValue);
+    setSearchTerm(searchValue);
   };
 
   return (

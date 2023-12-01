@@ -12,8 +12,8 @@ import img1 from "../assets/images/img1.jpg";
 import { MovieContext } from "../App";
 
 const List = () => {
-  const dataObj = useContext(MovieContext);
-  console.log("🚀 ~ file: List.js:16 ~ List ~ dataObj:", dataObj.movie);
+  const { data, searchTerm } = useContext(MovieContext);
+  console.log("🚀 ~ file: List.js:16 ~ List ~ searchTerm:", searchTerm);
 
   return (
     <>
@@ -22,7 +22,7 @@ const List = () => {
         spacing={3}
         style={{ paddingLeft: "2.5%", paddingRight: "2.5%" }}
       >
-        {dataObj.movie.films.map((movie) => (
+        {data.allFilms.films.map((movie) => (
           <Grid item key={movie.id} xs={6} sm={4} md={3} lg={3}>
             <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
               <Card style={{ height: "100%", width: "100%" }}>
