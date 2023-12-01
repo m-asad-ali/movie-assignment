@@ -6,15 +6,11 @@ import img1 from "../assets/images/img1.jpg";
 import { MovieContext } from "../App";
 
 const MovieDetail = () => {
-  const moviesData = useContext(MovieContext);
-  // console.log("In Details", moviesData.films);
+  const dataObj = useContext(MovieContext);
+  // console.log("In Details", dataObj.films);
 
   const { id } = useParams();
-  const movie = moviesData?.films.find((m) => m.id === id);
-  console.log(
-    "🚀 ~ file: MovieDetail.js:14 ~ MovieDetail ~ movie:",
-    movie.producers
-  );
+  const movie = dataObj?.movie?.films.find((m) => m.id === id);
 
   if (!movie) {
     return <div>Movie not found</div>;

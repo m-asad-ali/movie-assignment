@@ -17,8 +17,7 @@ function App() {
 
   return (
     <>
-      <MovieContext.Provider value={data.allFilms}>
-        {/* <Box /> */}
+      <MovieContext.Provider value={{ movie: data.allFilms, searchTerm: "" }}>
         <Router>
           <Routes>
             <Route exact path="/" element={<Home />} />
