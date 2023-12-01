@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Typography, Button } from "@material-ui/core";
