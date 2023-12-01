@@ -13,13 +13,12 @@ import { MovieContext } from "../App";
 
 const List = () => {
   const { data, searchTerm } = useContext(MovieContext);
-  let filteredMovies;
+  let filteredMovies = [];
 
   if (searchTerm !== "") {
     filteredMovies = data.allFilms?.films?.filter((movie) =>
       movie.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    console.log("Filter Movie: ", filteredMovies);
   } else {
     filteredMovies = [];
   }
@@ -40,7 +39,7 @@ const List = () => {
               >
                 <Card style={{ height: "100%", width: "100%" }}>
                   <CardMedia style={{ height: 300 }} image={img1} />
-                  <CardContent>
+                  <CardContent style={{ backgroundColor: "#FAF6F0" }}>
                     <Typography
                       variant="h6"
                       component="div"
