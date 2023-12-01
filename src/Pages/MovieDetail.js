@@ -27,7 +27,7 @@ const MovieDetail = () => {
         <img
           src={img1}
           alt="Movie"
-          style={{ width: "70%", maxHeight: "70%", objectFit: "cover" }}
+          style={{ width: "60%", maxHeight: "100%", objectFit: "cover" }}
         />
       </Grid>
 
@@ -40,20 +40,21 @@ const MovieDetail = () => {
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Release Date: {movie.releaseDate}
+          <b>Release Date: </b> {movie.releaseDate}
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Director: {movie.director}
+          <b>Director: </b> {movie.director}
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Characters Names:{" "}
+          <b>Characters Names: </b>
           {movie.characterConnection.characters.map((obj) => `${obj.name}, `)}
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Producer Names: {movie.producers.map((obj) => `${obj}, `)}
+          <b>Producer Names: </b>
+          {movie.producers.map((obj) => `${obj}, `)}
         </Typography>
         <Button variant="contained" color="primary">
           Watch Now
